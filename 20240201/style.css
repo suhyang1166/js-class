@@ -1,0 +1,26 @@
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+  font: bold 48px/1 'arial';
+} */
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.clicked {
+  background: yellowgreen;
+  color: crimson;
+} */
+
+.dark {
+  background: #000;
+  color: #fff;
+}
