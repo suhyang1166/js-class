@@ -13,15 +13,16 @@ const input = document.querySelector("#todo");
 const button = document.querySelector("#button");
 const ul = document.querySelector("ul");
 
-const todos = [];
+let todos = [];
 const save = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
 };
-console.log(todos);
 
 const delItem = (e) => {
   const target = e.target.parentElement;
-  target.remove();
+  todos = todos.filter((todo) => todo.id != target.id);
+  save();
+  todos = target.remove();
 };
 
 // 입력자 값
@@ -53,7 +54,21 @@ const handler = (e) => {
   input.value = "";
 };
 
-button.addEventListener("click", handler);
+const init = () => {
+  const userTodos = JSON.parse(localStorage.getItem("todos"));
+  if (userTodos) {
+    userTodos.forEach((todo) => {
+      addItem(todo);
+    });
+  } else {
+    handler();
+  }
+
+  todos = userTodos;
+};
+
+init();
+button.addEventListener("submit", handler);
 
 // localStorage.setItem("hello", "World");
 // const myData = localStorage.getItem("hello");

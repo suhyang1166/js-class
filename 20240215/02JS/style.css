@@ -48,3 +48,15 @@ li {
   border-bottom: 1px dotted lightgray;
   padding-bottom: 10px;
 }
+button {
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  transition: all 0.5s;
+}
+button:hover {
+  background: #3498db;
+  color: #fff;
+}
