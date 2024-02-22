@@ -154,4 +154,5 @@ class Book2 {
 }
 
 const book3 = new Book2("파이썬", 500, true);
+``;
 console.log(book3);
